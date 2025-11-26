@@ -1,0 +1,1 @@
+export CROSS_COMPILE=/home/wsl/jp621/aarch64--glibc--stable-2022.08-1/bin/aarch64-buildroot-linux-gnu-
