@@ -14,17 +14,11 @@
 #endif
 #define pr_fmt(fmt) "%s[%s]: " fmt, KBUILD_MODNAME, __func__
 
+const unsigned int GPIO_BASE = 348;
+
 struct gpio_keys_info {
-    unsigned int gpio;
-    unsigned int irq;
+    unsigned int gpio_pin;
+    int irq;
     const char *name;
 };
 
-const unsigned int GPIO0_BASE = 348;
-const unsigned int GPIO1_BASE = 348;
-const struct gpio_keys_info gpio_keys[] = {
-    {GPIO0_BASE + 134, 0, "PIN21_SPI1_MISO"},
-    {GPIO0_BASE + 96, 0, "PIN22_GPIO17"},
-    {GPIO0_BASE + 133, 0, "PIN23_SPI1_CLK"},
-    {GPIO0_BASE + 136, 0, "PIN24_SPI1_CS0_N"},
-};
